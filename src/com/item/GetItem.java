@@ -56,6 +56,7 @@ public class GetItem {
 		DBHelper driver=new DBHelper();
 		driver.openStatement();
 		ResultSet rs;
+		//如果是管理则无需判断用户名
 		if(power==1){
 			rs=driver.query("select * from dingdan");
 		}else{
@@ -63,7 +64,7 @@ public class GetItem {
 		}
 		try {
 			while(rs.next()){
-				for(int i=1;i<=10;i++){
+				for(int i=1;i<=9;i++){
 					String item=rs.getString(i);
 					list.add(item);
 				}
@@ -77,8 +78,8 @@ public class GetItem {
 		return json;
 	}
 	
-	/*
-	public static void main(String[] args) {
-		System.out.println(""+new GetItem().getList("谢霆锋"));
+	
+	/*public static void main(String[] args) {
+		System.out.println(""+new GetItem().getList("xietingfeng"));
 	}*/
 }

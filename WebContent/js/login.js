@@ -25,9 +25,7 @@ function  createRequest(url) {
 
 function getRequest(){
     if (http_request.readyState == 4){      //判断请求状态
-    	//alert("请求码："+http_request.status);
         if (http_request.status == 200){      //请求成功，开始处理返回结果
-			 alert("响应内容："+http_request.responseText);  //设置提示内容
 			 window.location.href=http_request.responseText; 
         }else{
             alert("请求页面有错误！");      //请求页面有错误

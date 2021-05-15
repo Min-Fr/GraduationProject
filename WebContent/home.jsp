@@ -158,7 +158,7 @@
                 </a>
                 </li>
                 <li class="active">
-                    <a class="" href="EveryList.html">
+                    <a class="" href="everyList.jsp">
                         <i class="icon_house_alt"></i>
                         <span>货单列表</span>
                     </a>
