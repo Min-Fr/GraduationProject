@@ -44,7 +44,7 @@ function checkUser(userName){
         alert("密码不能为空");
         return false;
     }
-    createRequest('checkLogin.jsp?userName='+encodeURIComponent(userName)+"&password="+encodeURIComponent(password));
+    createRequest('DoLoginServlet?userName='+encodeURIComponent(userName)+"&password="+encodeURIComponent(password));
 }
 
 

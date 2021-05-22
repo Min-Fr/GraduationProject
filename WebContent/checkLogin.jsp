@@ -8,13 +8,6 @@
 			.getBytes("ISO-8859-1"),"UTF-8");
 	String password=new String(request.getParameter("password")
 			.getBytes("ISO-8859-1"),"UTF-8");
-	/*login.setUserName(userName);
-	login.setPassword(password);
-	if(login.checkLogin()==1){
-		out.print("doLogin.jsp");
-	} else{
-		out.print("error");
-	}*/
 %>
 <jsp:setProperty property="userName" name="login"/>
 <jsp:setProperty property="password" name="login"/>
