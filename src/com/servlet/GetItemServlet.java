@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import com.item.GetItem;
 
-public class getItemServlet extends HttpServlet{
+public class GetItemServlet extends HttpServlet{
 	@Override
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub

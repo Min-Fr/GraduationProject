@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<%@ page language="java" contentType="text/html; charset=utf-8"%>
-	<meta charset="UTF-8">
+    <%@ page language="java" contentType="text/html; charset=utf-8"%>
+    <meta charset="UTF-8">
     <title>添加订单</title>
     <!-- bootstrap theme -->
     <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -197,69 +197,72 @@
 
             <!--列表-->
             <div class="row">
-                        <div class="col-lg-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    <!--  search form start -->
-                                    <div class="btn-group">
-                                        <a id="huowufenlei" class="btn btn-default">选择货物分类</a>
-                                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                                        <a class="jiange"></a>
-                                        <a class="btn-group"></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a onclick='select("huowufenlei","普通货物")'>普通货物</a></li>
-                                            <li><a onclick='select("huowufenlei","易碎")'>易碎</a></li>
-                                            <li><a onclick='select("huowufenlei","液体")'>液体</a></li>
-                                            <li><a onclick='select("huowufenlei","保鲜类食品")'>保鲜类食品</a></li>
-                                            <li><a onclick='select("huowufenlei","生物活体")'>生物活体</a></li>
-                                            <li><a onclick='select("huowufenlei","文件")'>文件</a></li>
-                                            <li class="divider"></li>
-                                            <li><a onclick='select("huowufenlei","不选择分类")'>不选择分类</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a id="baosun" class="btn btn-default">选择报损</a>
-                                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                                        <a class="jiange"></a>
-                                        <a class="btn-group">
-                                            <input id="so" class="form-control" placeholder="输入名称Enter搜索" type="search" onkeypress="search()">
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a onclick='select("baosun","完好")'>完好</a></li>
-                                            <li><a onclick='select("baosun","破损")'>破损</a></li>
-                                            <li class="divider"></li>
-                                            <li><a onclick='select("baosun","不选择报损")'>不选择报损</a></li>
-                                        </ul>
-                                    </div>
-                                        <!--  search form end -->
-                                </header>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>订单编号</th>
-                                            <th>货物名称</th>
-                                            <th>货物分类</th>
-                                            <th>货物重量</th>
-                                            <th>仓库分类</th>
-                                            <th>状态</th>
-                                            <th>报损</th>
-                                            <th>发货地址</th>
-                                            <th>收货地址</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody  id="table">
-                                            <script>
-                                            	getItemsFromService()
-                                                createTable()
-                                            </script>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </section>
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <!--  search form start -->
+                            <div class="btn-group">
+                                <a id="huowufenlei" class="btn btn-default">选择货物分类</a>
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <a class="jiange"></a>
+                                <a class="btn-group"></a>
+                                <ul class="dropdown-menu">
+                                    <li><a onclick='select("huowufenlei","普通货物")'>普通货物</a></li>
+                                    <li><a onclick='select("huowufenlei","易碎")'>易碎</a></li>
+                                    <li><a onclick='select("huowufenlei","液体")'>液体</a></li>
+                                    <li><a onclick='select("huowufenlei","保鲜类食品")'>保鲜类食品</a></li>
+                                    <li><a onclick='select("huowufenlei","生物活体")'>生物活体</a></li>
+                                    <li><a onclick='select("huowufenlei","文件")'>文件</a></li>
+                                    <li class="divider"></li>
+                                    <li><a onclick='select("huowufenlei","不选择分类")'>不选择分类</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a id="baosun" class="btn btn-default">选择报损</a>
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <a class="jiange"></a>
+                                <a class="btn-group">
+                                    <input id="so" class="form-control" placeholder="输入名称Enter搜索" type="search" onkeypress="search()">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a onclick='select("baosun","完好")'>完好</a></li>
+                                    <li><a onclick='select("baosun","破损")'>破损</a></li>
+                                    <li class="divider"></li>
+                                    <li><a onclick='select("baosun","不选择报损")'>不选择报损</a></li>
+                                </ul>
+                            </div>
+                            <!--  search form end -->
+                        </header>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>订单编号</th>
+                                    <th>货物名称</th>
+                                    <th>货物分类</th>
+                                    <th>货物重量</th>
+                                    <th>仓库分类</th>
+                                    <th>状态</th>
+                                    <th>报损</th>
+                                    <th>发货地址</th>
+                                    <th>收货地址</th>
+                                </tr>
+                                </thead>
+                                <tbody  id="table">
+                                </tbody>
+                            </table>
                         </div>
-                    </div>
+                    </section>
+                </div>
+                <a class="btn-group">
+                    <input id="pageNum" class="btn-huanye" type="text" value="1" onkeypress="nextPage()" \>
+                    <b id="page">/1页</b>
+                </a>
+                <script>
+                    //getItemsFromService()
+                    createTable()
+                </script>
+            </div>
             <!--列表结束-->
 
         </section>
