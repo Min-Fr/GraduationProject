@@ -259,7 +259,7 @@
                     <b id="page">/1页</b>
                 </a>
                 <script>
-                    //getItemsFromService()
+                    getItemsFromService()
                     createTable()
                 </script>
             </div>
