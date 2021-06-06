@@ -14,27 +14,6 @@ public class GetItem {
 	}
 	
 	/*
-	 * 验证用户权限
-	 * */
-	public int userPower(String user){
-		int power=-1;
-		DBHelper driver=new DBHelper();
-		driver.openStatement();
-		ResultSet rs=driver.query("select power from user where user='"+user+"'");
-		try {
-			while(rs.next()){
-				power=rs.getInt("power");
-			}
-		} catch (SQLException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-		}
-		//关闭数据库连接
-		driver.close();
-		return power;
-	}
-	
-	/*
 	 * List转Json
 	 * */
 	public String listToJson(List list){
@@ -50,7 +29,7 @@ public class GetItem {
 	public String getList(String user){
 		List list=new ArrayList<String>();
 		//获得用户权限
-		int power=userPower(user);
+		int power=CheckUserPower.userPower(user);
 		DBHelper driver=new DBHelper();
 		driver.openStatement();
 		ResultSet rs;

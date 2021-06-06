@@ -2956,6 +2956,12 @@ input[type="button"].btn-block {
   margin-left: +15px;
 }
 
+.btn-huanye{
+  text-align: center;
+  margin-left:960px;
+  width: 50px;
+}
+
 .btn-group,
 .btn-group-vertical {
   position: relative;
