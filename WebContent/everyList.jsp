@@ -170,7 +170,7 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a class="" href="addFiles.html">
+                    <a class="" href="addFiles.jsp">
                         <i class="icon_house_alt"></i>
                         <span>添加货单</span>
                     </a>

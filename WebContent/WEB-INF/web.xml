@@ -5,6 +5,7 @@
     <welcome-file>login.jsp</welcome-file>
     <!-- servlet -->
   </welcome-file-list>
+  	<!-- DoLoginServlet -->
     <servlet>
         <servlet-name>DoLoginServlet</servlet-name>
         <servlet-class>com.servlet.DoLoginServlet</servlet-class>
@@ -13,7 +14,7 @@
         <servlet-name>DoLoginServlet</servlet-name>
         <url-pattern>/DoLoginServlet</url-pattern>
     </servlet-mapping>
-    
+    <!-- GetItemServlet -->
     <servlet>
         <servlet-name>GetItemServlet</servlet-name>
         <servlet-class>com.servlet.GetItemServlet</servlet-class>
@@ -21,6 +22,15 @@
     <servlet-mapping>
         <servlet-name>GetItemServlet</servlet-name>
         <url-pattern>/GetItemServlet</url-pattern>
+    </servlet-mapping>
+    <!-- AddItemServlet -->
+    <servlet>
+        <servlet-name>AddItemServlet</servlet-name>
+        <servlet-class>com.servlet.AddItemServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddItemServlet</servlet-name>
+        <url-pattern>/AddItemServlet</url-pattern>
     </servlet-mapping>
   <!-- 配置登录过滤器 -->
 	<filter>
