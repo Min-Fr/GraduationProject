@@ -1,6 +1,9 @@
 package com.item;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONObject;
 
@@ -12,29 +15,17 @@ public class AddItem {
 	}
 	
 	/*
-	 * json字符串转json数组,json数组再转JSONObject对象
-	 * */
-	public JSONObject toJSONobject(String json){
-		
-		return null;	
-	}
-	
-	/*
 	 * 添加订单到数据库
-	 * json 前端传回的json字符串
-	 * user 用户名
 	 * */
-	public void additems(String json,String user){
-		//获得用户权限
-		int power=CheckUserPower.userPower(user);
-		//获得json数组
-		//JSONArray jsonArray=toJSONArray(json);
+	public void additems(String items[]){
 		//链接数据库
 		DBHelper driver=new DBHelper();
 		driver.openStatement();
-		ResultSet rs;
-		String sql=null;
-		//sql="insert into dingdan values"
-			//	+ "('"++"',";
+		String sql="INSERT INTO dingdan VALUES(0,'"+items[0]+"','"+items[1]+"','"+items[2]+"','"
+				+items[3]+"','"+items[4]+"','"+items[5]+"','"+items[6]+"','"+items[7]+"','"+items[8]+"','"
+				+items[9]+"','"+items[10]+"','"+items[11]+"','"+items[12]+"','"+items[13]+"','"+items[14]+"','"
+				+items[15]+"','"+items[16]+"','"+items[17]+"','完好','')";
+		System.out.println(sql);
+		driver.updata(sql);
 	}
 }
